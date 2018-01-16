@@ -2,11 +2,23 @@
 
 <h2>New Burgers</h2>
 
+
+{{!-- <ul>
+  {{#each cats}}
+    {{#unless sleepy}}
+      {{> cats/cat-block sleep=true}}
+    {{/unless}}
+  {{/each}}
+</ul> --}}
+
+
 <ul>
   {{#each burgers}}
-    {{#unless devoured}}
-      {{ burgers/burger-block devoured=true}}
-    {{/unless}}
+    <li> 
+       {{#unless this.devoured}}
+         <p>Burger Name: {{this.burger_name}}</p>
+       {{/unless}}
+    </li>
   {{/each}}
 </ul>
 
@@ -14,10 +26,12 @@
 
 <ul>
   {{#each burgers}}
-    {{#if devoured}}
-      {{ burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
+      <li> 
+         {{#if this.devoured}}
+           <p>Burger Name: {{this.burger_name}}</p>
+         {{/if}}
+      </li>
+    {{/each}}
 </ul>
 
 <h2>Add a Burger</h2>

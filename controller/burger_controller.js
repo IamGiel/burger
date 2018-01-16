@@ -12,8 +12,18 @@ router.get("/", function(req, res) {
     var hbsObject = {
       burgers: data
     };
-    console.log(hbsObject);
-    res.render("../views/index", hbsObject);
+    console.log("this is hbsObject +++====>>>>>", hbsObject);
+    console.log("this is data +++====>>>>>",data);
+    var eaten = [];
+    for (var i = 0; i < data.length; i++) {
+      console.log("this is DEVOURED +++====>>>>>", data[i].devoured);
+      var dev = data[i].devoured;
+      if(dev === 0){
+        eaten.push(data[i]);
+      }
+    }
+    console.log("this is eaten array +++====>>>>>", eaten);
+    res.render("index", hbsObject);
   });
 });
 
@@ -32,6 +42,7 @@ router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
+  console.log("burger_controller +++======++>>>>", req.params);
 
   burger.update({
     devoured: req.body.devoured

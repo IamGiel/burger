@@ -1,39 +1,62 @@
-<h1>BURGERS GALORE!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  
+          
+</head>
+<body>
+  <h1>BURGERS GALORE!</h1>
 
-<h2>New Burgers</h2>
+  <h2>New Burgers</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burger/burger-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+  <ul>
+    {{#each burgers}}
+      {{#if devoured}}
+        {{> burger/burger-block sleep=false}}
+      {{/if}}
+    {{/each}}
+  </ul>
 
-<h2>Devoured Burgers</h2>
+  <h2>Devoured Burgers</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burger/burger-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+  <ul>
+    {{#each burgers}}
+      {{#unless devoured}}
+        {{> burger/burger-block sleep=true}}
+      {{/unless}}
+    {{/each}}
+  </ul>
 
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+  <h2>Add a Burger</h2>
+  <form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
+    <div class="form-group">
+      <label for="ca">Burger Name:</label>
+      <input type="text" id="ca" name="name">
+    </div>
 
-  <div class="form-group">
-    <label for="devoured">Select One:</label><br>
-    <input type="radio" name="devoured" value="1" checked> Name your burger<br>
-    <input type="radio" name="devoured" value="0"> What you ate last time?
-  </div>
+    <div class="form-group">
 
-  <button type="submit">Add Burger</button>
-</form>
+      <h4 for="devoured" for="test3">Select One:</h4><br>
+
+      <p>
+        <input  type="radio" id="test1" name="devoured" value="1"/>
+        <label for="test1">Name your burger </label>
+      </p>
+      <p>
+        <input  type="radio" id="test2" name="devoured" value="0"/>
+        <label for="test2">What you ate last time?</label>
+      </p>
+      <p>
+ 
+    </div>
+
+    <button type="submit">Add Burger</button>
+  </form>
+
+</body>
+</html>
+
+
+

@@ -13,7 +13,6 @@ router.get("/", function(req, res) {
       burgers: data
     };
     console.log("this is hbsObject +++====>>>>>", hbsObject);
-    console.log("this is data +++====>>>>>",data);
     var eaten = [];
     for (var i = 0; i < data.length; i++) {
       console.log("this is DEVOURED +++====>>>>>", data[i].devoured);
@@ -29,7 +28,7 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res) {
   burger.create([
-    "name", "devoured"
+    "burger_name", "devoured"
   ], [
     req.body.name, req.body.devoured
   ], function(result) {

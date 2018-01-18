@@ -14,23 +14,45 @@ li {
   margin: 5px;
   background: lightblue;
 }
-/*button ids*/
-#return, #eat {
-	font-size: 12px;
-	-moz-border-radius: 100px / 50px;
-		-webkit-border-radius: 100px / 50px;
-		border-radius: 100px / 50px;
+
+/*h1 {
+    font-size: 4.2rem;
+    line-height: 42%;
+    margin: 2.1rem 0 1.68rem 0;
+}*/
+
+#header_li {
+  font-size: 18px;
+  padding: 0;
+  margin: 5px;
+  background: lightblue;
+  height: 54px;
 }
 
-.change-sleep, .delete-cat {
+
+/*button ids*/
+#return, #eat, .change-sleep {
+    font-size: 12px;
+    -moz-border-radius: 100px / 50px;
+    -webkit-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    height: 27px;
+    width: 98px;
+}
+
+.delete-cat {
     height: 32px;
     line-height: 10px;
     position: relative;
     left:19px;
     width: 0;
     height: 0;
-    border-top: 9px solid transparent;
-    border-right: 41px solid green;
+    
+    
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
     -ms-transform: rotate(10deg);
@@ -41,21 +63,104 @@ li {
   font-weight: bold;
 }
 
-/*card box*/
-.card .card-content {
-    padding: 5px;
-    border-radius: 0 0 2px 2px;
+
+.card {
+    position: relative;
+    margin: .5rem 0 1rem 0;
+    background-color: #fff;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    width: 50%;
+    float: left;
 }
 
-/*.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: red;
-}*/
+.card .card-image img {
+    display: block;
+    margin-left: 12px;
+    /* margin-right: 12px; */
+    position: relative;
+    left: -9px;
+    top: 0;
+    bottom: 0;
+    width: 99%;
+}
 
+.row {
+    width: 50%;
+    margin-left: 0px;
+    display: inline-block;
+    margin-bottom: 20px;
+    position: relative;
+    float: left;
+}
+
+.row .col.m6 {
+    width: 405%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+/*// Media Query Ranges*/
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+@mixin column-count($ct) {
+  -webkit-column-count: $ct;
+  -moz-column-count: $ct;
+  column-count: $ct;
+}
+
+.cards-container {
+  column-break-inside: avoid;
+  .card {
+    display: inline-block;
+    overflow: visible;
+  }
+}
+
+@media #{$small-and-down} {
+  .cards-container {
+    @include column-count(1);
+  }
+}
+@media #{$medium-and-up} {
+  .cards-container {
+    @include column-count(2);
+  }
+}
+@media #{$large-and-up} {
+  .cards-container {
+    @include column-count(3);
+  }
+}
+.text-center {
+  text-align: center;
+}
 .form-group {
   margin-bottom: 5px;
 }
+
+/*horizontal card stuff*/
+.card.horizontal {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    display: block;
+    left: -26%;
+}
+
 
 /*materialize stuff*/
 

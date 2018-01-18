@@ -5,81 +5,144 @@
           
 </head>
 <body>
-  <h1>BURGERS GALORE!</h1>
+  
 
-  <div class="row">
-          <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-              <div class="card-content black-text">
-                <span class="card-title"><h2>New Burgers</h2></span>
-                 <p>I am a very simple card. I am good at containing small bits of information.
-                 I am convenient because I require little markup to use effectively.</p>
-                <ul>
-                  {{#each burgers}}
-                    {{#if devoured}}
-                      {{> burger/burger-block sleep=false}}
-                    {{/if}}
-                  {{/each}}
-                </ul>
-              </div>
-              <div class="card-action">
-                <a href="https://www.rd.com/food/recipes-cooking/burger-recipes/">Burger Ideas</a>
-                <a href="#">See photos</a>
-              </div>
-            </div>
-          </div>
-        </div>
+  {{!-- header --}}
 
+  <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo"><i class="Large material-icons">broken_image</i>BURGERS GALORE!</a>
+        <ul class="right hide-on-med-and-down">
+          <li id="header_li"><a href="sass.html"><i class="material-icons">search</i></a></li>
+          <li id="header_li"><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+          <li id="header_li"><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+          <li id="header_li"><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+  {{!-- cards  --}}
+  <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="https://media.timeout.com/images/103902673/image.jpg">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">New Burger<i class="material-icons right">more_vert</i></span>
+        <p><a href="https://www.rd.com/food/recipes-cooking/burger-recipes/">Burger Ideas</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">A perfect Burger<i class="material-icons right">close</i></span>
+        <p>The perfect burger is a feat of architecture. It's built in the same way the Empire State Building or the Golden Gate Bridge was, piece by piece and with great thought and technical consideration. - Alex Delany</p>
         <div class="row">
                 <div class="col s12 m6">
                   <div class="card blue-grey darken-1">
                     <div class="card-content black-text">
-                      <span class="card-title"><h2>Devoured Burgers</h2></span>
-                       <p>I am a very simple card. I am good at containing small bits of information.
-                       I am convenient because I require little markup to use effectively.</p>
+                      <span class="card-title"><h2>New Burgers</h2></span>
+                       <p>Name your own burger</p>
                       <ul>
                         {{#each burgers}}
-                          {{#unless devoured}}
-                            {{> burger/burger-block sleep=true}}
-                          {{/unless}}
+                          {{#if devoured}}
+                            {{> burger/burger-block sleep=false}}
+                          {{/if}}
                         {{/each}}
                       </ul>
                     </div>
                     <div class="card-action">
-                      <a href="#">Reason for returns</a>
-                      <a href="#">Send Photo</a>
+                      {{!-- <a href="https://www.rd.com/food/recipes-cooking/burger-recipes/">Burger Ideas</a>
+                      <a href="#">See photos</a> --}}
                     </div>
                   </div>
                 </div>
               </div>
-
-  <h2>Add a Burger</h2>
-  <form class="create-form">
-
-    <div class="form-group">
-
-      <label for="ca">Burger Name:</label>
-      <input placeholder="Burger Name" class="validate" type="text" id="ca" name="name">
+      </div>
     </div>
 
-    <div class="form-group">
+    <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="http://i2.wp.com/www.foodrepublic.com/wp-content/uploads/2012/03/recipe_pattymelt.jpg?resize=700%2C%20466">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Devoured Burgers<i class="material-icons right">more_vert</i></span>
+          <p><a href="https://www.eater.com/2013/4/16/6448941/the-12-most-elusive-burgers-and-how-to-get-them">Heres what the world eats most</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">It is here, where eaten burgers live.<i class="material-icons right">close</i></span>
+          <p>Their names as follows.</p>
+            <div class="row">
+                    <div class="col s12 m6">
+                      <div class="card blue-grey darken-1">
+                        <div class="card-content black-text">
+                          <span class="card-title"><h2>Devoured Burgers</h2></span>
+                           <p>Return 'em or Throw them away.</p>
+                          <ul>
+                            {{#each burgers}}
+                              {{#unless devoured}}
+                                {{> burger/burger-block sleep=true}}
+                              {{/unless}}
+                            {{/each}}
+                          </ul>
+                        </div>
+                        <div class="card-action">
+                          {{!-- <a href="#">Reason for returns</a>
+                          <a href="#">Send Photo</a> --}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        </div>
+    </div>
 
-      <h4 for="devoured" for="test3">Select One:</h4><br>
+  
+    
+        
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="http://www.bigbasinburgerbar.com/uploads/2/6/6/3/26633221/651215.jpg?469">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              {{!-- add a form in the card --}}
+              <form class="create-form">
 
-      <p>
-        <input  type="radio" id="test1" name="devoured" value="1"/>
-        <label for="test1">Name your burger </label>
-      </p>
-      <p>
-        <input  type="radio" id="test2" name="devoured" value="0"/>
-        <label for="test2">What you ate last time?</label>
-      </p>
-      <p>
+                  <div class="form-group">
+                    <h2>Add your burger:</h2>
+
+                    <label for="ca">Burger Name:</label>
+                    <input placeholder="Burger Name" class="validate" type="text" id="ca" name="name">
+                  </div>
+
+                  <div class="form-group">
+
+                    <h4 for="devoured" for="test3">Select One:</h4><br>
+
+                    <p>
+                      <input  type="radio" id="test1" name="devoured" value="1"/>
+                      <label for="test1">Name your burger </label>
+                    </p>
+                    <p>
+                      <input  type="radio" id="test2" name="devoured" value="0"/>
+                      <label for="test2">What you ate last time?</label>
+                    </p>
+                    <p>
+               
+                  </div>
+
+                  <button type="submit">Add Burger</button>
+                </form>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      
+                
+        
+
  
-    </div>
-
-    <button type="submit">Add Burger</button>
-  </form>
+  
 
 </body>
 </html>

@@ -9,10 +9,11 @@ html {
 }
 
 li {
-  font-size: 18px;
-  padding: 5px;
-  margin: 5px;
-  background: lightblue;
+    font-size: 18px;
+    padding: 22px;
+    margin: 5px;
+    background: lightblue;
+    height: 68%;
 }
 
 /*h1 {
@@ -63,14 +64,13 @@ li {
   font-weight: bold;
 }
 
-
 .card {
     position: relative;
     margin: .5rem 0 1rem 0;
     background-color: #fff;
     transition: box-shadow .25s;
     border-radius: 2px;
-    width: 50%;
+    width: 33%;
     float: left;
 }
 
@@ -93,9 +93,9 @@ li {
     position: relative;
     float: left;
 }
-
 .row .col.m6 {
-    width: 405%;
+    width: 621%;
+    /* height: 65%; */
     margin-left: auto;
     left: auto;
     right: auto;
@@ -157,8 +157,8 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    display: block;
-    left: -26%;
+    display: inline-block;
+    float: left;
 }
 
 

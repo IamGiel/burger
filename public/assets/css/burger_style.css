@@ -90,6 +90,12 @@ li {
     width: 99%;
 }
 
+.card .card-content p {
+    margin: 0;
+    color: inherit;
+    width: 200px;
+}
+
 .row {
     width: 50%;
     margin-left: 0px;
@@ -234,6 +240,12 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
        position: relative;
        display: block;
        float: left;
-       width: 99%;
+       width: 100%;
    }
-        
+
+   .grey-text.text-lighten-4 {
+       color: #f5f5f5 !important;
+       width: 100%;
+       position: relative;
+       display: block;
+   }

@@ -20,7 +20,7 @@ MySQL  |relational database management system
 
 #### Directory structure
 
-All the recommended files and directories from the steps above should look like the following structure:
+Here is how I structured my work:
 
 ```
 .

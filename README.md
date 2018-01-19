@@ -13,13 +13,10 @@ Packages   |  Use
 ------------- | -------------
 Express  |  standard server framework for Node.js
 Body Parser  | a top-level middleware, which will parse the bodies of all incoming requests
-Handle Bars| provides the power necessary to let you build semantic templates
+Handle Bars| provides the power necessary to build semantic templates
 MySQL  |relational database management system 
 
-
 ---
-
-##Directory Structure
 
 #### Directory structure
 

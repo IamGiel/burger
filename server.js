@@ -24,3 +24,8 @@ app.use(routes);
 app.listen(PORT, function() {
   console.log("App now listening at localhost:" + PORT);
 });
+
+
+//find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+
+

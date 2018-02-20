@@ -1,6 +1,6 @@
 # Burger
 
-BURGER is a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM.  Heres the work flow:
+BURGER is a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM.  Heres the work flow:  View it here: [Burger App](https://powerful-depths-25126.herokuapp.com/)
   
 * Used and implemented the MVC design pattern.
 * Used Node and MySQL to query and route data in the app.

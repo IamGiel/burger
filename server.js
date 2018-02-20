@@ -25,7 +25,9 @@ app.listen(PORT, function() {
   console.log("App now listening at localhost:" + PORT);
 });
 
+// NOTES: untrack and delete files from GITHUB
+// find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+// git rm -r --cached path_to_your_folder/
 
-//find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
 
 
